@@ -1,0 +1,30 @@
+.clay-table{
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clay-table th{
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-bottom-width: 2px;
+    background-color: rgb(230, 230, 230);
+}
+
+.clay-table td{
+    border: solid 1px #ccc;
+    padding: 5px 10px;
+}
+
+.clay-table tbody tr{
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.clay-table tbody tr:nth-child(even){
+    background-color: #f1f1f1;
+}
+
+.clay-table tbody tr:hover{
+    background-color: rgb(225, 225, 225);
+}

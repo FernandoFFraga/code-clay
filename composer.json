@@ -1,0 +1,21 @@
+{
+    "name": "3f/code-clay",
+    "description": "Collection Tools",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Fernando Fraga",
+            "email": "fernando@equipe3f.com",
+            "homepage": "https://equipe3f.com/fernando",
+            "role": "developer"
+        }
+    ],
+    "config": {
+        "vendor-lib": "vendor"
+    },
+    "autoload": {
+        "psr-4":{
+            "Src\\": "src/"
+        }
+    }
+}
