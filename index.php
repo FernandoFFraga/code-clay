@@ -1,17 +1,67 @@
+<pre><?php
+
+require('./vendor/autoload.php');
+
+use Src\Tools\Table;
+
+$table = new Table([
+    "itemId" => "id"
+]);
+$table->setHeader([
+    "Nome",
+    "Sobrenome",
+    [
+        "content" => "Idade",
+        "align" => "right"
+    ]
+]);
+
+$source = [
+    [
+        "id" => 1001,
+        "name" => "Fernando",
+        "surname" => "Fraga",
+        "age" => 19
+    ],
+    [
+        "id" => 1002,
+        "name" => "Stefany",
+        "surname" => "Decnop",
+        "age" => 20
+    ],
+    [
+        "id" => 1003,
+        "name" => "Anderson",
+        "surname" => "Asevedo",
+        "age" => 20
+    ],
+    "count" => 3 //Opcional
+];
+
+$config = [
+    "name",
+    "surname",
+    "age"
+];
+
+$table->setBody($source, $config);
+
+print_r($table);
+
+echo("</pre>");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/table-code-clay.css">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/table-code-clay.css">
 </head>
 <body>
-    <div class="switch-btn">
-        <div class="switch-indice"></div>
-    </div>
+    <?= $table->print(); ?>
+    
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </html>
-

@@ -9,28 +9,28 @@ class Table
      *
      * @var string
      */
-    public $classes;
+    private $classes;
 
     /**
      * Var que irá receber o id que será usado para identificar os elementos
      *
      * @var string
      */
-    public $id;
+    private $id;
 
     /**
      * Define o padrão do atributo nowrap nas células.
      *
      * @var boolean
      */
-    public $nowrap;
+    private $nowrap;
 
     /**
      * Define o padrão de alinhamento nas células
      * Valores: center|right|left
      * @var string
      */
-    public $align;
+    private $align;
 
     /**
      * Controlador para definir se as células deverão receber classes para 
@@ -40,7 +40,7 @@ class Table
      *
      * @var boolean
      */
-    public $tdClasses;
+    private $tdClasses;
 
     /**
      * Controlador para definir se as células deverão receber ids para identi-
@@ -50,7 +50,7 @@ class Table
      *
      * @var boolean
      */
-    public $tdId;
+    private $tdId;
 
     /**
      * Controlador para definir se as linhas deverão receber ids para identifi-
@@ -60,7 +60,7 @@ class Table
      *
      * @var boolean
      */
-    public $trId;
+    private $trId;
 
     /**
      * Var que irá guardar o cabeçalho em HTML
@@ -70,11 +70,18 @@ class Table
     public $header;
 
     /**
+     * Var que irá guardar o corpo da tabela em HTML
+     *
+     * @var string
+     */
+    public $body;
+
+    /**
      * Váriavel de controle que irá receber as mensagens de erro.
      *
      * @var string
      */
-    public $error = 'No Errors';
+    private $error = 'No Errors';
 
     /**
      * Váriavel que irá receber o link com a referência de valor para
@@ -82,7 +89,7 @@ class Table
      *
      * @var string
      */
-    public $itemId;
+    private $itemId;
 
     /**
      * Váriavel que irá receber a tabela completa
