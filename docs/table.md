@@ -1,10 +1,10 @@
-# Tabela    
-<p>Essa ferramenta tem por objetivo estruturar os dados recebidos de um database em tabelas de forma prática e replicável.</p>
+# Table    
+<p>This tool aims to structure the data received from a database into tables in a practical and replicable way.</p>
 
 <br>
 
-# Uso
-<p> Siga as instruções a seguir:
+# Utilization 
+<p> Follow the instructions below: </p>
 
 ## Namespace
 
@@ -16,21 +16,22 @@ use Src\Tools\Table;
 
 ```
 
-## Método de Construção
-<p>Para a construção do objeto é necessário passar alguns paramêtros dentro de um array:</p>
+## Method of construction 
+<p>To construct the object, it is necessary to insert some parameters inside an array:</p>
 
-<b>Chave - Descrição (padrão)</b>
+<b>Key – Description (default)  </b>
 
-* <b>id</b> - Identificador da tabela <i>(#table)</i>
-* <b>classes</b> - Contém todas as classes da tabela <i>(.clay-table)</i>
-* <b>align</b> - Padrão de alinhamento das células <i>(center)</i>
-* <b>nowrap</b> - Padrão de nowrap das células <i>(true)</i>
-* <b>tdClasses</b> - Define se as células irão receber classes de identificação <i>(true)</i>
-* <b>tdId</b> - Define se as células irão receber id's para identificação <i>(true)</i>
-* <b>trId</b> - Define se as linhas irão receber id's de identificação <i>(true)</i>
-* <b>itemId</b> - Define a key de origem dos dados de identificação externa da linha. Ex: Código de um produto <i>(Empty)</i>
+* <b>id</b> - Table identifier  <i>(#table)</i>
+* <b>classes</b> - Contains all classes from the table <i>(.clay-table)</i>
+* <b>align</b> - Cell alignment pattern <i>(center)</i>
+* <b>nowrap</b> - Cell nowrap pattern <i>(true)</i>
+* <b>tdClasses</b> - Defines if the cells will receive identification classes <i>(true)</i>
+* <b>tdId</b> - Defines if the cells will receive id’s for identification <i>(true)</i>
+* <b>trId</b> - Defines if the rows will receive id’s for identification <i>(true)</i>
+* <b>itemId</b> - Defines the source key of the line's external identification data. <i>(Empty)</i>
 
-<b>Para construção com dados padrão:</b>
+<b>For building with default data:</b>
+
 ```php
 
 require('./vendor/autoload.php');
@@ -56,7 +57,8 @@ $table = new Table($config);
 
 ```
 
-<b>Para construção com dados customizados:</b>
+<b>For building with custom data:</b>
+
 ```php
 
 require('./vendor/autoload.php');
@@ -72,8 +74,8 @@ $table = new Table([
 
 ```
 
-## Definir cabeçalho
-<p>Para definir o cabeçalho da tabela você irá utilizar o seguinte método, passando o valor de cada coluna em um array: </p>
+## Definition of header
+<p>To define the table header you going to use the following method, passing the data of each column in an array: </p>
 
 ```php
 
@@ -85,14 +87,14 @@ $table->setHeader([
 
 ```
 
-<b>Resultado:</b>
+<b>Preview:</b>
 
 | Name | Surname | Age |
 |------|---------|-----|
 | ...  | ...     | ... |
 
-<b>Customizar</b>
-<p>O exemplo acima considera as configurações padrões. Para customizar cada uma das colunas utilize uma array na posição de cada valor que deseja alterar, e passe o nome que será impresso por uma key content. </p>
+<b>Customize</b>
+<p>The example above assumes the default settings. To customize each of the columns use an array at the position of each data you want to change, and enter the data that going to be printed by a key content. </p>
 
 ```php
 
@@ -109,23 +111,23 @@ $table->setHeader([
 
 ```
 
-<b>Resultado:</b>
+<b>Preview:</b>
 
 | Name | Surname | Age |
 |:----:|:-------:|----:|
 | ...  | ...     | ... |
 
-<i>Obs: O objeto utiliza uma hierárquia de configuração, por isso, caso não seja passado algum dos valores listados acima, ele utilizará o padrão definido na construção do objeto.</i>
+<i>Note: The object uses a configuration hierarchy, so if you do not enter any of the data listed above, it will use the default defined in the construction of the object.</i>
 
 <br>
 
-## Definir body
-<p>Para construir o corpo da tabela você deverá passar dois arrays: </p>
+## Definition of body
+<p>To build the table’s body you must define two arrays: </p>
  
- * Array Source - Irá conter os dados da tabela
- * Array Config - Irá conter a configuração e bind das colunas
+ * Array Source - Going to contain the table data
+ * Array Config - It going to contain the configuration and bind of the columns
 
- <b>Exemplo de array source:</b>
+ <b>Example of array source:</b>
 
  ```php
 
@@ -153,13 +155,13 @@ $source = [
 
  ```
 
-<i> Obs 1: Geralmente esse array será produto de uma consulta ao banco de dados, caso o parâmetro "count" não seja passado ele irá contar automáticamente. </i>
+<i>Note one: Usually this array will be the product of a database consult, if the "count" parameter is not defined it will automatically count.</i>
 
-<i> Obs 2: Os array_keys desse array serão utilizados no array de configuração. </i>
+<i>Note two: The array_keys of this array going to be used in the configuration array. </i>
 
 <br>
 
-<b> Exemplo de array de configuração: </b>
+<b> Example of configuration array: </b>
 
 ```php
 
@@ -187,13 +189,13 @@ $config = [
 
 ```
 
-<i>Obs 1: Seguindo o mesmo padrão do cabeçalho, para definir customizações para cada coluna, basta passar um array na posição referente a coluna.</i>
+<i>Note one: Following the same pattern of the header, to define customizations for each column, just insert an array in the position referring to the column.</i>
 
-<i>Obs 2: Caso não seja passado algum paramêtro de customização, será utilizado o valor padrão definido na construção do objeto.</i>
+<i>Note two: If no customization parameter is defined, the default value defined in the construction of the object will be used.</i>
 
 <br>
 
-<b>Montagem final:</b>
+<b>Ultimate modeling:</b>
 
 ```php
 
@@ -229,8 +231,8 @@ $table->setBody($source, $config);
 
 ```
 
-## Montar tabela
-<p>Não é necessário passar nenhum paramêtro para esse método, e ele retornará a tag <b>&lt;table></b> completa em HTML</p>
+## Table montage
+<p>It is not necessary to enter any parameter for this method, it will return the complete <b>&lt;table></b> tag in HTML.</p>
 
 ```php
 
@@ -243,7 +245,7 @@ $tableHTML = $table->print(); //Storage
 ```
 
 ## Debug
-<p>A classe da tabela possui um método que retorna a mensagem de erro correspondente a cada situação, utilize dessa forma: <p>
+<p>The table class has a method that returns the error message corresponding to each situation. Use in that way:<p>
 
 ```php
 
@@ -251,8 +253,8 @@ $tableHTML = $table->print(); //Storage
 
 ```
 
-## Métodos adicionais
-<p>Caso sejá necessário alterar o id ou as classes de uma tabela, utilize os seguintes métodos: </p>
+## Additional Methods
+<p>In case it is necessary to change the id or classes of a table, use the following methods: </p>
 
 ```php
 
@@ -263,8 +265,8 @@ $table->setId("users"); //Contém o novo id
 $table->setClasses("class1 class2"); //Classes css
 ```
 
-## Identificador de linhas
-<p>O parâmetro <b> <i>itemId</i> </b> passado no momento da criação irá inserir um atributo chamado  <b> <i>data-id</i></b> dentro de cada linha, assim podendo ser utilizado junto de javascript para o que seja necessário.</p>
+## Line identifier
+<p>The <b> <i>itemId</i> </b> parameter defined at creation time going to insert an attribute called <b> <i>data-id</i> </b> inside each row, so it can be used together with javascript for whatever is needed.</p>
 
 ```html
 
@@ -277,7 +279,7 @@ $table->setClasses("class1 class2"); //Classes css
 ```
 
 ## Stylesheet
-<p>Está disponivel um estilo amigável para as tabelas com class="clay-table" no arquivo:</p>
+<p>A style for tables with class = "clay-table" is available in the file:</p>
 
 ```bash
 ├── css
@@ -286,4 +288,4 @@ $table->setClasses("class1 class2"); //Classes css
 ```
 
 ## Versão
-<p>Essa ferramenta se encontra na versão <b>1.0</b> </p>
+<p>This tool is in version <b>1.0</b> </p>

@@ -6,31 +6,41 @@
   </a>
 </p>
 
-<p align='center'>Coleção de ferramentas para auxiliar o desenvolvimento PHP</p>
 <br>
 
-# Objetivo
-<p>O code-clay é um conjunto de ferramentas e soluções prontas para tarefas recorrentes na construção de aplicações web com PHP.</p>
-<p>Todas as ferramentas foram projetadas para facilitar o fluxo de trabalho do programador e adicionar um nível a mais de abstração.</p>
-<p>As ferramentas possuem uma interface de comunicação entre elas, porém funcionam de forma indepente. Como peças de LEGO! </p>
+# Goal
+<p>Code-clay is a set of ready-made tools and solutions for recurring tasks in building web applications with PHP.</p>
+<p>All tools are designed to ease the programmer's workflow and add an extra abstraction level.</p>
+<p>The tools have a communication interface between them, but they work independently. Similar to LEGO blocks!</p>
 
-# Começando
+# Introduction
 
-<p>Todas as ferramentas funcionam de maneira independente, e por isso para iniciar basta realizar o download individual das ferramentas que irá utilizar. </p>
-<p>Cada uma das ferramentas possui um arquivo de documentação individual que irá conter todas as informações sobre os requisitos e modo de utilização.</p>
+<p>All tools work independently, for that reason, to begin, you just have to download the individual tools you going to use.</p>
+<p>Each of the tools has an individual documentation file that will contain all the information about the requirements and the mode of operation.</p>
 
-<b><i>Obs: Recomendamos a utilização de namespaces em conjunto com o autoload de acordo com a PSR-4</i></b>
+<b><i>Note: We recommend using namespaces in conjunction with autoload according to PSR-4</i></b>
 
 <br>
 
-# Ferramentas
+# Tools
 
-* <b> [Gerador de tabelas](docs/table.md) </b>
+* <b> [Table generator](docs/table.md) </b>
 
 * ...
 * ...
 
 <br>
 
-# Autor
-Feito com ❤️ por <b> [Fernando Fraga](https://www.equipe3f.com/Fernando) </b>
+# Special thanks
+
+Translator - <b>Stefany Decnop</b> ❤️
+
+<br>
+
+# Contributors
+Programmer - <b> [Fernando Fraga](https://www.equipe3f.com/Fernando) </b>
+
+Designer - <b> [Anderson Asevedo](https://www.instagram.com/designer.and/) </b>
+
+
+
